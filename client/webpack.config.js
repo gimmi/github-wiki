@@ -15,7 +15,7 @@ module.exports = function (env) {
             ]
         },
         output: {
-            path: path.resolve(__dirname, '..', 'server', 'src', 'static'),
+            path: path.resolve(__dirname, '..', 'gh-pages'),
             filename: ifDev('[name].js', '[fullhash].js')
         },
         devtool: ifDev('source-map', false),

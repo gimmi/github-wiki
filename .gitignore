@@ -1,6 +1,6 @@
 /.vscode/
 
-/server/src/static/
+/gh-pages/
 
 /client/node_modules/
 /client/npm-debug.log

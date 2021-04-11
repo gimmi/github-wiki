@@ -15,6 +15,7 @@
     "whatwg-fetch": "^3.6.2"
   },
   "scripts": {
+    "server": "http-server .. -o /gh-pages",
     "watch": "webpack --env development --watch",
     "build": "webpack --env production"
   },
@@ -28,6 +29,7 @@
     "eslint-loader": "^4.0.2",
     "eslint-plugin-react": "^7.22.0",
     "html-webpack-plugin": "^5.3.1",
+    "http-server": "^0.12.3",
     "immer": "^9.0.1",
     "react-split": "^2.0.9",
     "style-loader": "^2.0.0",
