@@ -14,7 +14,7 @@ export default class PreviewComponent extends React.PureComponent {
     }
 
     render() {
-        return <ReactMarkdown className="preview">{this.props.markdown}</ReactMarkdown>
+        return <ReactMarkdown className="markdown-body">{this.props.markdown}</ReactMarkdown>
     }
 }
 

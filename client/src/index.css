@@ -1,3 +1,4 @@
+@import "~github-markdown-css";
 @import "~normalize.css";
 
 *, *:before, *:after {
@@ -33,4 +34,9 @@ body {
 .gutter.gutter-horizontal {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
     cursor: col-resize;
+}
+
+.markdown-body {
+    padding: 1em;
+    overflow-y: scroll;
 }
