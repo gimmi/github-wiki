@@ -5,6 +5,7 @@ import EditorComponent from './EditorComponent';
 import PreviewComponent from './PreviewComponent';
 import storage from './storage';
 import github from './GithubRepository'
+import { overlayManager } from './MessageOverlay'
 
 export default class MarkdownEditorComponent extends React.Component {
     constructor(props) {
@@ -43,8 +44,14 @@ export default class MarkdownEditorComponent extends React.Component {
     }
 
     async onSave() {
-        console.log('onSave')
-        await github.setContent(this.props.path, this.state.markdown)
+        overlayManager.show('Saving...')
+        try {
+            await github.setContent(this.props.path, this.state.markdown)
+            overlayManager.hide()
+        } catch (ex) {
+            overlayManager.show(ex.message)
+            console.error(ex)
+        }
     }
 
     render() {

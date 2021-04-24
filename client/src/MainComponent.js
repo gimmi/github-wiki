@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import MarkdownEditorComponent from './MarkdownEditorComponent'
 import DocsComponent from './DocsComponent'
+import MessageOverlay from './MessageOverlay'
 import github from './GithubRepository'
 
 export default class MainComponent extends React.Component {
@@ -33,6 +34,7 @@ export default class MainComponent extends React.Component {
                     <Route path="/:path+" render={this.renderEditor} />
                     <Route path="/" render={this.renderDocs} />
                 </Switch>
+                <MessageOverlay />
             </Router>
         )
     }
